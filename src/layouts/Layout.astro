@@ -1,13 +1,18 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
+---
+import Head from '../Head.astro';
+---
+
+<html lang='en'>
+	<Head />
 	<body>
+		<!--Screen reader skip main nav-->
+		<a
+			class='skip'
+			aria-label='skip to main content'
+			href='#main'
+			tabindex='1'
+			>Click To Skip To Main Content</a
+		>
 		<slot />
 	</body>
 </html>
