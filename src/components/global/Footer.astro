@@ -1,0 +1,100 @@
+---
+const businessName = import.meta.env.PUBLIC_NAME;
+const phoneNumber = import.meta.env.PUBLIC_PHONE_NUMBER;
+const email = import.meta.env.PUBLIC_EMAIL;
+const addressLineOne = import.meta.env.PUBLIC_ADDRESS_LINE_ONE;
+const addressLineTwo = import.meta.env.PUBLIC_ADDRESS_LINE_TWO;
+const addressCity = import.meta.env.PUBLIC_CITY;
+const addressProvince = import.meta.env.PUBLIC_PROVINCE;
+const addressPostalCode = import.meta.env.PUBLIC_POSTAL_CODE;
+const logo = import.meta.env.PUBLIC_IWS_LOGO;
+---
+
+<footer id='footer'>
+	<div class='container'>
+		<div class='left-section'>
+			<a
+				class='logo'
+				href='/'
+				><img
+					loading='lazy'
+					decoding='async'
+					src={logo}
+					alt='logo'
+					width='264'
+					height='78'
+				/></a
+			>
+			<p>
+				Extra content if you need it, if not you can delete this whole p tag. I
+				usually do.
+			</p>
+		</div>
+		<div class='right-section'>
+			<div class='lists'>
+				<ul>
+					<li>
+						<h2>Information</h2>
+					</li>
+					<li>
+						<a href='/'>Home</a>
+					</li>
+					<li>
+						<a href='/about'>About Us</a>
+					</li>
+					<li>
+						<a href='/projects'>Projects</a>
+					</li>
+					<li>
+						<a href='/reviews'>Reviews</a>
+					</li>
+					<li>
+						<a href='/contact'>Contact</a>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<h2>Services</h2>
+					</li>
+					<li>Service1</li>
+					<li>Service2</li>
+					<li>Service4</li>
+					<li>Service5</li>
+				</ul>
+				<ul>
+					<li>
+						<h2>Contact</h2>
+					</li>
+					<li>
+						<a href='/contact'>
+							{addressLineOne}<br />
+							{addressLineTwo}<br />
+							{addressCity}
+							{addressProvince}
+							{addressPostalCode}
+						</a>
+					</li>
+					<li>
+						<a href=`tel:${phoneNumber}`>
+							T: {phoneNumber}
+						</a>
+					</li>
+					<li>
+						<a href=`mailto:${ email }`>Click to Email</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class='credit'>
+		<span>Designed and Hand Coded by</span>
+		<a
+			href='https://www.impactwebstudio.ca'
+			target='_blank'
+			rel='noopener'
+			>Impact Web Studio</a
+		>
+		<span class='copyright'> | Copyright 2025 - Present</span>
+	</div>
+</footer>
