@@ -2,6 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/home/Hero.astro';
 import Services from '../components/home/Services.astro';
+import SBS from '../components/container/SBS.astro';
+import SBSReversed from '../components/container/SBSReversed.astro';
+import Gallery from '../components/Gallery.astro';
+import Reviews from '../components/home/Review.astro';
+import CTA from '../components/CTA.astro';
 
 import '../styles/css/critical.css';
 import '../styles/css/local.css';
@@ -14,6 +19,11 @@ const preloadImg = '/assets/images/landing.jpg';
 <Layout>
 	<Hero />
 	<Services />
+	<SBS />
+	<SBSReversed />
+	<Gallery />
+	<Reviews />
+	<CTA />
 
 	<script
 		slot='head'
