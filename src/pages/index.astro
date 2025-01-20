@@ -1,6 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/home/Hero.astro';
+import Services from '../components/home/Services.astro';
+
+import '../styles/css/critical.css';
+import '../styles/css/local.css';
 
 const title = 'Pixel Perfect Websites | Code Stitch Web Designs | Denver, CO';
 const description = 'Meta description for the page';
@@ -9,6 +13,7 @@ const preloadImg = '/assets/images/landing.jpg';
 
 <Layout>
 	<Hero />
+	<Services />
 
 	<script
 		slot='head'
