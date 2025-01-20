@@ -1,5 +1,10 @@
 ---
 import '../../styles/css/header.css';
+
+const logo = import.meta.env.PUBLIC_IWS_LOGO;
+const businessNumber = import.meta.env.PUBLIC_PHONE_NUMBER;
+const facebookLink = import.meta.env.PUBLIC_FACEBOOK;
+const instagramLink = import.meta.env.PUBLIC_INSTAGRAM;
 ---
 
 <!-- Main Navigation -->
@@ -13,7 +18,7 @@ import '../../styles/css/header.css';
 			aria-label='back to home'
 		>
 			<img
-				src={import.meta.env.PUBLIC_IWS_LOGO}
+				src={logo}
 				alt='logo'
 				width='250'
 				height='30'
@@ -58,19 +63,51 @@ import '../../styles/css/header.css';
 				>
 					<li class='iws-li'>
 						<a
-							href=''
+							href='/'
 							class='iws-li-link iws-active'
 						>
 							Home
 						</a>
 					</li>
-					<li class='iws-li'>
-						<a
-							href=''
-							class='iws-li-link'
-						>
+					<li
+						class='iws-li iws-dropdown'
+						tabindex='0'
+					>
+						<span class='iws-li-link'>
 							About
-						</a>
+							<img
+								class='iws-drop-icon'
+								src='https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-gold.svg'
+								alt='dropdown icon'
+								width='15'
+								height='15'
+								decoding='async'
+								aria-hidden='true'
+							/>
+						</span>
+						<ul class='iws-drop-ul'>
+							<li class='iws-drop-li'>
+								<a
+									href='/about'
+									class='iws-li-link iws-drop-link'
+									>About IWS</a
+								>
+							</li>
+							<li class='iws-drop-li'>
+								<a
+									href='/about/faqs'
+									class='iws-li-link iws-drop-link'
+									>FAQs</a
+								>
+							</li>
+							<li class='iws-drop-li'>
+								<a
+									href='/about/reviews'
+									class='iws-li-link iws-drop-link'
+									>Reviews</a
+								>
+							</li>
+						</ul>
 					</li>
 					<!--Copy and paste this iws-dropdown list item and replace any .iws-li with this iws-dropdown group to make a new dropdown and it will work-->
 					<li
@@ -92,23 +129,45 @@ import '../../styles/css/header.css';
 						<ul class='iws-drop-ul'>
 							<li class='iws-drop-li'>
 								<a
-									href=''
+									href='/services/design'
 									class='iws-li-link iws-drop-link'
-									>Registration</a
+									>Web Design</a
 								>
 							</li>
 							<li class='iws-drop-li'>
 								<a
-									href=''
+									href='/services/apps'
 									class='iws-li-link iws-drop-link'
-									>Our Classes</a
+									>Web Apps</a
+								>
+							</li>
+							<li class='iws-drop-li'>
+								<a
+									href='/services/integrations'
+									class='iws-li-link iws-drop-link'
+									>Software Integrations</a
+								>
+							</li>
+							<li class='iws-drop-li'>
+								<a
+									href='/services/seo'
+									class='iws-li-link iws-drop-link'
+									>SEO</a
 								>
 							</li>
 						</ul>
 					</li>
 					<li class='iws-li'>
 						<a
-							href=''
+							href='/pricing'
+							class='iws-li-link'
+						>
+							Pricing
+						</a>
+					</li>
+					<li class='iws-li'>
+						<a
+							href='/blog'
 							class='iws-li-link'
 						>
 							Blog
@@ -116,7 +175,7 @@ import '../../styles/css/header.css';
 					</li>
 					<li class='iws-li'>
 						<a
-							href=''
+							href='/contact'
 							class='iws-li-link'
 						>
 							Contact
@@ -127,7 +186,7 @@ import '../../styles/css/header.css';
 		</nav>
 		<div class='iws-contact-group'>
 			<a
-				href='tel:+84 1985 33 999'
+				href=`tel:${businessNumber}`
 				class='iws-phone'
 			>
 				<img
@@ -139,11 +198,11 @@ import '../../styles/css/header.css';
 					aria-hidden='true'
 					decoding='async'
 				/>
-				+84 1985 33 999
+				{businessNumber}
 			</a>
 			<div class='iws-social'>
 				<a
-					href=''
+					href={facebookLink}
 					class='iws-social-link'
 				>
 					<img
@@ -171,7 +230,7 @@ import '../../styles/css/header.css';
 					/>
 				</a>
 				<a
-					href=''
+					href={instagramLink}
 					class='iws-social-link'
 				>
 					<img
