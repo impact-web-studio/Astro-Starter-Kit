@@ -3,84 +3,84 @@ import '../../styles/css/header.css';
 ---
 
 <!-- Main Navigation -->
-<header id='cs-navigation'>
-	<div class='cs-container'>
+<header id='iws-navigation'>
+	<div class='iws-container'>
 		<!--Nav Logo-->
 		<!--Logo is turned white in the css with a filter on dark mode-->
 		<a
 			href=''
-			class='cs-logo'
+			class='iws-logo'
 			aria-label='back to home'
 		>
 			<img
-				src='https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/day-care.svg'
+				src={import.meta.env.PUBLIC_IWS_LOGO}
 				alt='logo'
-				width='210'
-				height='29'
+				width='250'
+				height='30'
 				aria-hidden='true'
 				decoding='async'
 			/>
 		</a>
 		<!--Navigation List-->
 		<nav
-			class='cs-nav'
+			class='iws-nav'
 			role='navigation'
 		>
 			<!--Mobile Nav Toggle-->
 			<button
-				class='cs-toggle'
+				class='iws-toggle'
 				aria-label='mobile menu toggle'
 			>
 				<div
-					class='cs-box'
+					class='iws-box'
 					aria-hidden='true'
 				>
 					<span
-						class='cs-line cs-line1'
+						class='iws-line iws-line1'
 						aria-hidden='true'
 					></span>
 					<span
-						class='cs-line cs-line2'
+						class='iws-line iws-line2'
 						aria-hidden='true'
 					></span>
 					<span
-						class='cs-line cs-line3'
+						class='iws-line iws-line3'
 						aria-hidden='true'
 					></span>
 				</div>
 			</button>
-			<!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
-			<div class='cs-ul-wrapper'>
+			<!-- We need a wrapper div so we can set a fixed height on the iws-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the iws-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+			<div class='iws-ul-wrapper'>
 				<ul
-					id='cs-expanded'
-					class='cs-ul'
+					id='iws-expanded'
+					class='iws-ul'
 					aria-expanded='false'
 				>
-					<li class='cs-li'>
+					<li class='iws-li'>
 						<a
 							href=''
-							class='cs-li-link cs-active'
+							class='iws-li-link iws-active'
 						>
 							Home
 						</a>
 					</li>
-					<li class='cs-li'>
+					<li class='iws-li'>
 						<a
 							href=''
-							class='cs-li-link'
+							class='iws-li-link'
 						>
 							About
 						</a>
 					</li>
-					<!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+					<!--Copy and paste this iws-dropdown list item and replace any .iws-li with this iws-dropdown group to make a new dropdown and it will work-->
 					<li
-						class='cs-li cs-dropdown'
+						class='iws-li iws-dropdown'
 						tabindex='0'
 					>
-						<span class='cs-li-link'>
+						<span class='iws-li-link'>
 							Services
 							<img
-								class='cs-drop-icon'
+								class='iws-drop-icon'
 								src='https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-gold.svg'
 								alt='dropdown icon'
 								width='15'
@@ -89,35 +89,35 @@ import '../../styles/css/header.css';
 								aria-hidden='true'
 							/>
 						</span>
-						<ul class='cs-drop-ul'>
-							<li class='cs-drop-li'>
+						<ul class='iws-drop-ul'>
+							<li class='iws-drop-li'>
 								<a
 									href=''
-									class='cs-li-link cs-drop-link'
+									class='iws-li-link iws-drop-link'
 									>Registration</a
 								>
 							</li>
-							<li class='cs-drop-li'>
+							<li class='iws-drop-li'>
 								<a
 									href=''
-									class='cs-li-link cs-drop-link'
+									class='iws-li-link iws-drop-link'
 									>Our Classes</a
 								>
 							</li>
 						</ul>
 					</li>
-					<li class='cs-li'>
+					<li class='iws-li'>
 						<a
 							href=''
-							class='cs-li-link'
+							class='iws-li-link'
 						>
 							Blog
 						</a>
 					</li>
-					<li class='cs-li'>
+					<li class='iws-li'>
 						<a
 							href=''
-							class='cs-li-link'
+							class='iws-li-link'
 						>
 							Contact
 						</a>
@@ -125,13 +125,13 @@ import '../../styles/css/header.css';
 				</ul>
 			</div>
 		</nav>
-		<div class='cs-contact-group'>
+		<div class='iws-contact-group'>
 			<a
 				href='tel:+84 1985 33 999'
-				class='cs-phone'
+				class='iws-phone'
 			>
 				<img
-					class='cs-phone-icon'
+					class='iws-phone-icon'
 					src='https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-1a.svg'
 					alt='logo'
 					width='24'
@@ -141,13 +141,13 @@ import '../../styles/css/header.css';
 				/>
 				+84 1985 33 999
 			</a>
-			<div class='cs-social'>
+			<div class='iws-social'>
 				<a
 					href=''
-					class='cs-social-link'
+					class='iws-social-link'
 				>
 					<img
-						class='cs-social-icon'
+						class='iws-social-icon'
 						src='https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-1a.svg'
 						alt='logo'
 						width='12'
@@ -158,10 +158,10 @@ import '../../styles/css/header.css';
 				</a>
 				<a
 					href=''
-					class='cs-social-link'
+					class='iws-social-link'
 				>
 					<img
-						class='cs-social-icon'
+						class='iws-social-icon'
 						src='https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twitter-1a.svg'
 						alt='logo'
 						width='12'
@@ -172,10 +172,10 @@ import '../../styles/css/header.css';
 				</a>
 				<a
 					href=''
-					class='cs-social-link'
+					class='iws-social-link'
 				>
 					<img
-						class='cs-social-icon'
+						class='iws-social-icon'
 						src='https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram1a.svg'
 						alt='logo'
 						width='12'
@@ -186,10 +186,10 @@ import '../../styles/css/header.css';
 				</a>
 				<a
 					href=''
-					class='cs-social-link'
+					class='iws-social-link'
 				>
 					<img
-						class='cs-social-icon'
+						class='iws-social-icon'
 						src='https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/youtube1a.svg'
 						alt='logo'
 						width='12'
@@ -202,8 +202,8 @@ import '../../styles/css/header.css';
 		</div>
 		<!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
 		<!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
-            <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
-            <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
+            <svg class="iws-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+            <img class="iws-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
         </button> -->
 	</div>
 </header>
@@ -212,20 +212,22 @@ import '../../styles/css/header.css';
 	document.addEventListener('DOMContentLoaded', () => {
 		// add classes for mobile navigation toggling
 		var CSbody = document.querySelector('body');
-		const CSnavbarMenu = document.querySelector('#cs-navigation');
-		const CShamburgerMenu = document.querySelector('#cs-navigation .cs-toggle');
+		const CSnavbarMenu = document.querySelector('#iws-navigation');
+		const CShamburgerMenu = document.querySelector(
+			'#iws-navigation .iws-toggle'
+		);
 
 		CShamburgerMenu.addEventListener('click', function () {
-			CShamburgerMenu.classList.toggle('cs-active');
-			CSnavbarMenu.classList.toggle('cs-active');
-			CSbody.classList.toggle('cs-open');
+			CShamburgerMenu.classList.toggle('iws-active');
+			CSnavbarMenu.classList.toggle('iws-active');
+			CSbody.classList.toggle('iws-open');
 			// run the function to check the aria-expanded value
 			ariaExpanded();
 		});
 
-		// checks the value of aria expanded on the cs-ul and changes it accordingly whether it is expanded or not
+		// checks the value of aria expanded on the iws-ul and changes it accordingly whether it is expanded or not
 		function ariaExpanded() {
-			const csUL = document.querySelector('#cs-expanded');
+			const csUL = document.querySelector('#iws-expanded');
 			const csExpanded = csUL.getAttribute('aria-expanded');
 
 			if (csExpanded === 'false') {
@@ -250,11 +252,11 @@ import '../../styles/css/header.css';
 
 		// mobile nav toggle code
 		const dropDowns = Array.from(
-			document.querySelectorAll('#cs-navigation .cs-dropdown')
+			document.querySelectorAll('#iws-navigation .iws-dropdown')
 		);
 		for (const item of dropDowns) {
 			const onClick = () => {
-				item.classList.toggle('cs-active');
+				item.classList.toggle('iws-active');
 			};
 			item.addEventListener('click', onClick);
 		}
