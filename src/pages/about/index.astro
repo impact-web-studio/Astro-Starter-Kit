@@ -1,9 +1,18 @@
 ---
 const title = 'About | Code Stitch Web Designs';
-description: 'Meta description for the page';
+const description = 'Meta description for the page';
 preloadImg: '/assets/images/cabinets2.jpg';
 
 import Layout from 'src/layouts/Layout.astro';
 ---
 
-<Layout title={title} />
+<Layout
+	title={title}
+	description={description}
+>
+	<link
+		rel='stylesheet'
+		href='/src//styles/css/about.css'
+		slot='head'
+	/>
+</Layout>
