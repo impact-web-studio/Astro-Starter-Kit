@@ -16,7 +16,9 @@ import Footer from '../components/global/Footer.astro';
 			>Click To Skip To Main Content</a
 		>
 		<Header />
-		<slot />
+		<main id='main'>
+			<slot />
+		</main>
 		<Footer />
 	</body>
 </html>
