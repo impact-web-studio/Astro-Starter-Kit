@@ -45,7 +45,7 @@ const { title = 'My Astro Website', ...props } = Astro.props;
 	property='og:image:alt'
 	content=''
 />
-<!-- 
-<SomeOtherTags />
 
-<Favicon /> -->
+<slot name='headScript' />
+
+<!-- <Favicon /> -->

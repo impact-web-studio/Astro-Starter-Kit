@@ -5,7 +5,9 @@ import Footer from '../components/global/Footer.astro';
 ---
 
 <html lang='en'>
-	<Head />
+	<Head>
+		<slot name='headScript' />
+	</Head>
 	<body>
 		<!--Screen reader skip main nav-->
 		<a
