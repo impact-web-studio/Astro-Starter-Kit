@@ -1,10 +1,6 @@
 ---
 import '../../../public/styles/css/header.css';
 import { client } from '../../_data/client.js';
-
-const businessNumber = import.meta.env.PUBLIC_PHONE_NUMBER;
-const facebookLink = import.meta.env.PUBLIC_FACEBOOK;
-const instagramLink = import.meta.env.PUBLIC_INSTAGRAM;
 ---
 
 <!-- Main Navigation -->
@@ -186,7 +182,7 @@ const instagramLink = import.meta.env.PUBLIC_INSTAGRAM;
 		</nav>
 		<div class='iws-contact-group'>
 			<a
-				href=`tel:${businessNumber}`
+				href=`tel:${client.phone}`
 				class='iws-phone'
 			>
 				<img
@@ -198,11 +194,11 @@ const instagramLink = import.meta.env.PUBLIC_INSTAGRAM;
 					aria-hidden='true'
 					decoding='async'
 				/>
-				{businessNumber}
+				{client.phone}
 			</a>
 			<div class='iws-social'>
 				<a
-					href={facebookLink}
+					href={client.socials.facebook}
 					class='iws-social-link'
 				>
 					<img
@@ -230,7 +226,7 @@ const instagramLink = import.meta.env.PUBLIC_INSTAGRAM;
 					/>
 				</a>
 				<a
-					href={instagramLink}
+					href={client.socials.instagram}
 					class='iws-social-link'
 				>
 					<img
