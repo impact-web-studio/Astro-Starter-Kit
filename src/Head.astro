@@ -1,6 +1,6 @@
 ---
 // import Favicon from '../assets/Favicon.astro';
-import '../public/styles/css/global.css';
+// import '../public/styles/css/global.css';
 
 const { title, description } = Astro.props;
 ---
@@ -10,6 +10,10 @@ const { title, description } = Astro.props;
 	href='/sitemap-index.xml'
 />
 <!-- CSS Styles -->
+<link
+	rel='stylesheet'
+	href='/styles/css/global.css'
+/>
 <slot name='style' />
 
 <title>{title}</title>
