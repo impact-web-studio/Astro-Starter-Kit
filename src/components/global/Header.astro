@@ -1,7 +1,7 @@
 ---
 import '../../../public/styles/css/header.css';
+import { client } from '../../_data/client.js';
 
-// const logo = import.meta.env.PUBLIC_IWS_LOGO;
 const businessNumber = import.meta.env.PUBLIC_PHONE_NUMBER;
 const facebookLink = import.meta.env.PUBLIC_FACEBOOK;
 const instagramLink = import.meta.env.PUBLIC_INSTAGRAM;
@@ -18,7 +18,7 @@ const instagramLink = import.meta.env.PUBLIC_INSTAGRAM;
 			aria-label='back to home'
 		>
 			<img
-				src={import.meta.env.PUBLIC_IWS_LOGO}
+				src={client.links.logo}
 				alt='logo'
 				width='250'
 				height='30'
