@@ -1,21 +1,10 @@
 ---
 import Layout from 'src/layouts/Layout.astro';
-
-// import '../../public/styles/css/contact.css';
+import { client } from '../_data/client.js';
 
 const title = 'Contact | Impact Web Studio';
 const description = 'Meta description for the page';
 const reloadImg = '/assets/images/cabinets2.jpg';
-
-const businessName = import.meta.env.PUBLIC_NAME;
-const businessNumber = import.meta.env.PUBLIC_PHONE_NUMBER;
-const email = import.meta.env.PUBLIC_EMAIL;
-const addressLineOne = import.meta.env.PUBLIC_ADDRESS_LINE_ONE;
-const addressLineTwo = import.meta.env.PUBLIC_ADDRESS_LINE_TWO;
-const addressCity = import.meta.env.PUBLIC_CITY;
-const addressProvince = import.meta.env.PUBLIC_PROVINCE;
-const addressPostalCode = import.meta.env.PUBLIC_POSTAL_CODE;
-const logo = import.meta.env.PUBLIC_IWS_LOGO;
 ---
 
 <Layout
@@ -136,14 +125,14 @@ const logo = import.meta.env.PUBLIC_IWS_LOGO;
 				<a
 					class='iws-link'
 					href='mailto:{ client.email }'
-					>{email}</a
+					>{client.email}</a
 				>
 				<!--Phone-->
 				<span class='iws-header'>Phone</span>
 				<a
 					class='iws-link'
 					href='tel:{ client.phoneForTel }'
-					>{businessNumber}</a
+					>{client.phone}</a
 				>
 				<!--Address-->
 				<span class='iws-header'>Address</span>
@@ -151,14 +140,14 @@ const logo = import.meta.env.PUBLIC_IWS_LOGO;
 					class='iws-link'
 					href='{ client.address.mapLink }'
 				>
-					{addressLineOne},
+					{client.address.lineOne},
 					<br />
-					{addressLineTwo},
+					{client.address.lineTwo},
 					<br />
 					<span class='iws-block'>
-						{addressCity}
-						{addressProvince}
-						{addressPostalCode}
+						{client.address.city}
+						{client.address.province}
+						{client.address.postalCode}
 					</span>
 				</a>
 
